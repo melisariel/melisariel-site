@@ -7,10 +7,10 @@
 
 <style>
 :root {
-  --accent: #4da3ff;
-  --bg1: #05070d;
-  --bg2: #0a1020;
-  --text: #eaeaea;
+  --bg: #000000;
+  --text: #e6e6e6;
+  --muted: #8a8a8a;
+  --accent: #8b5cf6; /* фиолетовый */
 }
 
 * {
@@ -21,107 +21,123 @@
 
 body {
   height: 100vh;
-  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: linear-gradient(120deg, var(--bg1), var(--bg2));
-  overflow: hidden;
+  font-family: Inter, system-ui, Arial, sans-serif;
 }
 
-/* Анимированный фон */
-body::before {
-  content: "";
-  position: absolute;
-  inset: -50%;
-  background: radial-gradient(circle at 30% 30%, #1a3cff33, transparent 40%),
-              radial-gradient(circle at 70% 70%, #00c3ff22, transparent 45%);
-  animation: move 20s linear infinite;
-}
-
-@keyframes move {
-  from { transform: translate(0,0); }
-  to   { transform: translate(10%,10%); }
-}
-
-/* Контейнер */
-.main {
-  position: relative;
+/* Общий layout */
+.layout {
+  display: flex;
   height: 100%;
+}
+
+/* Левая колонка */
+.sidebar {
+  width: 220px;
+  padding: 40px 24px;
+  border-right: 1px solid #111;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar h2 {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Ссылки */
+.nav a,
+.socials a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  padding: 6px 0;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.nav a:hover,
+.socials a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Центр */
+.main {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
 }
 
-/* Контент */
-.content {
-  max-width: 700px;
-  animation: fadeUp 1.2s ease forwards;
+/* Контент смещён вправо */
+.profile {
+  margin-left: 12%;
+  max-width: 520px;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 2px;
-}
-
-h1 span {
+.profile h1 {
+  font-size: 3rem;
+  font-weight: 600;
   color: var(--accent);
 }
 
-p {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  opacity: 0.85;
+.profile p {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
-/* Кнопки */
-.links {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-a {
-  padding: 12px 26px;
-  border: 1px solid var(--accent);
-  color: var(--text);
-  text-decoration: none;
-  border-radius: 30px;
-  transition: 0.3s;
-  backdrop-filter: blur(6px);
-}
-
-a:hover {
+/* Минимальная линия */
+.divider {
+  margin-top: 28px;
+  width: 60px;
+  height: 2px;
   background: var(--accent);
-  color: #000;
-  box-shadow: 0 0 20px var(--accent);
+  opacity: 0.6;
 }
 </style>
 </head>
 
 <body>
-  <div class="main">
-    <div class="content">
-      <h1><span>melisariel</span></h1>
-      <p>
-        Студент. Математика. Программирование.<br>
-        Личный сайт и открытое портфолио.
-      </p>
+  <div class="layout">
 
-      <div class="links">
+    <!-- Левая панель -->
+    <aside class="sidebar">
+      <div class="nav">
+        <h2>Навигация</h2>
         <a href="about.html">Обо мне</a>
         <a href="projects.html">Проекты</a>
-        <a href="https://github.com/USERNAME" target="_blank">GitHub</a>
-        <a href="links.html">Контакты</a>
+        <a href="contacts.html">Контакты</a>
       </div>
-    </div>
+
+      <div class="socials">
+        <h2>Соцсети</h2>
+        <a href="https://github.com/USERNAME" target="_blank">GitHub</a>
+        <a href="https://steamcommunity.com/id/USERNAME" target="_blank">Steam</a>
+        <a href="https://youtube.com/@USERNAME" target="_blank">YouTube</a>
+        <a href="https://tiktok.com/@USERNAME" target="_blank">TikTok</a>
+      </div>
+    </aside>
+
+    <!-- Центр -->
+    <main class="main">
+      <div class="profile">
+        <h1>melisariel</h1>
+        <div class="divider"></div>
+        <p>
+          Студент.<br>
+          Математика. Программирование.<br>
+          Личный сайт и открытое портфолио.
+        </p>
+      </div>
+    </main>
+
   </div>
 </body>
 </html>
