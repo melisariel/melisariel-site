@@ -1,94 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Кирк — РП персонаж</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #111; color: #eee; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        img { max-width: 250px; border-radius: 10px; display: block; margin: 10px auto; }
-        h1, h2, h3 { color: #0af; text-align: center; }
-        p, li { line-height: 1.5; }
-        ul { list-style-type: disc; padding-left: 20px; }
-        a { color: #0af; text-decoration: none; display: block; margin: 5px 0; text-align: center; }
-        a:hover { text-decoration: underline; }
-        .section { margin-bottom: 30px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>melisariel</title>
+
+<style>
+:root {
+  --accent: #4da3ff;
+  --bg1: #05070d;
+  --bg2: #0a1020;
+  --text: #eaeaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(120deg, var(--bg1), var(--bg2));
+  overflow: hidden;
+}
+
+/* Анимированный фон */
+body::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at 30% 30%, #1a3cff33, transparent 40%),
+              radial-gradient(circle at 70% 70%, #00c3ff22, transparent 45%);
+  animation: move 20s linear infinite;
+}
+
+@keyframes move {
+  from { transform: translate(0,0); }
+  to   { transform: translate(10%,10%); }
+}
+
+/* Контейнер */
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Контент */
+.content {
+  max-width: 700px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 2px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Кнопки */
+.links {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  padding: 12px 26px;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+}
+
+a:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 20px var(--accent);
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Кирк</h1>
-        <img src="kirik_photo.jpg" alt="Кирк">
-        
-        <div class="section">
-            <h2>Основное</h2>
-            <p><strong>Возраст:</strong> 17 лет</p>
-            <p><strong>Рост:</strong> 170 см</p>
-            <p><strong>Вес:</strong> 50 кг</p>
-            <p><strong>Сила:</strong> 4/10</p>
-            <p><strong>Класс:</strong> Странник (Исцеляющий Пилигрим)</p>
-        </div>
+  <div class="main">
+    <div class="content">
+      <h1><span>melisariel</span></h1>
+      <p>
+        Студент. Математика. Программирование.<br>
+        Личный сайт и открытое портфолио.
+      </p>
 
-        <div class="section">
-            <h2>Описание</h2>
-            <p>Кирк — юный странник с добрым сердцем, воспитанный в монастыре Эланор среди суровых северных гор. 
-            Обладает мягкими чертами и спокойной речью. Худощав, с тонкими пальцами, длинными черными волосами, обычно заплетёнными в простую косу. 
-            Его взгляд — ясный, проницательный, в нём таится необычайная сила духа. Предпочитает простую одежду монаха. 
-            Несмотря на кажущуюся хрупкость, твёрд в убеждениях и решителен в действиях, особенно когда защищает тех, кто не может постоять за себя.</p>
-        </div>
-
-        <div class="section">
-            <h2>История</h2>
-            <p>Кирк был найден младенцем у врат монастыря Эланор, рядом с ним лежал амулет в виде полумесяца. 
-            Монахи приютили его и обучили древним наукам, заботе о живом и искусству внутреннего равновесия. 
-            Он рано раскрыл дар к лечению и связи с природой. Когда ему исполнилось 16, покинул монастырь, чтобы найти своё предназначение и разгадать тайну происхождения.</p>
-        </div>
-
-        <div class="section">
-            <h2>Характер</h2>
-            <ul>
-                <li>Доброта и сострадание</li>
-                <li>Скромность</li>
-                <li>Сила духа</li>
-                <li>Склонность к уединению</li>
-                <li>Способен быть лидером в трудный момент</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Навыки и способности</h2>
-            <ul>
-                <li>Лечение травами и заклинаниями</li>
-                <li>Успокоение животных</li>
-                <li>Отличное знание природы и ориентация на местности</li>
-                <li>Чтение древних рукописей и анализ</li>
-                <li>Убеждение и дипломатия</li>
-                <li>Внимание к деталям</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Магические способности</h2>
-            <p><strong>Магия:</strong> 27/50 | <strong>Класс магии:</strong> Базовый → Средний | <strong>Мана:</strong> 1000</p>
-            <ul>
-                <li>Целительное касание (базовый): лечит мелкие раны и боли (затрата: 100 маны)</li>
-                <li>Успокоение зверя (базовый): снимает агрессию у животного (затрата: 80 маны)</li>
-                <li>Лунная гармония (средний): создаёт аурическое поле покоя на небольшой радиус (затрата: 200 маны)</li>
-                <li>Природный рост (средний): ускоряет рост растений (затрата: 150 маны)</li>
-                <li>Свет Луны (ульта) (высший): излучает очищающий свет, лечит группу и защищает от тьмы</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Снаряжение</h2>
-            <ul>
-                <li>Монашеский халат с символом луны</li>
-                <li>Травяная сумка с настойками и бальзамами</li>
-                <li>Книга мудрости с рецептами и записями</li>
-                <li>Амулет Луны (магическая защита от злых намерений)</li>
-                <li>Книга о добродетелях</li>
-            </ul>
-        </div>
+      <div class="links">
+        <a href="about.html">Обо мне</a>
+        <a href="projects.html">Проекты</a>
+        <a href="https://github.com/USERNAME" target="_blank">GitHub</a>
+        <a href="links.html">Контакты</a>
+      </div>
     </div>
+  </div>
 </body>
 </html>
