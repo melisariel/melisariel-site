@@ -45,6 +45,11 @@ body {
   gap: 24px;
 }
 
+.sidebar.right {
+  border-right: none;
+  border-left: 1px solid #111;
+}
+
 .sidebar h2 {
   font-size: 0.85rem;
   letter-spacing: 1px;
@@ -83,32 +88,48 @@ body {
 <body>
 <div class="layout">
 
+  <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
+    <div>
+      <h2>Инфо</h2>
+      <a href="about.html">Обо мне</a>
+    </div>
 
-    <div class="socials">
-      <h2>Аккаунты</h2>
+    <div>
+      <h2>Профили</h2>
       <a href="https://github.com/melisariel/" target="_blank">GitHub</a>
       <a href="https://steamcommunity.com/id/melisariel/" target="_blank">Steam</a>
       <a href="https://www.youtube.com/@melisarielcpp" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com/@melisariel?_r=1&_t=ZS-93XLnn5SpXu" target="_blank">TikTok</a>
     </div>
 
-    <div class="answers">
+    <div>
       <h2>Ответы mail</h2>
-      <a href="https://otvet.mail.ru/profile/ariebenz/" target="_blank">Аккаунт №1</a>
-      <a href="https://otvet.mail.ru/profile/rainbow666/" target="_blank">Аккаунт №2</a>
-      <a href="https://otvet.mail.ru/profile/aless666/" target="_blank">Аккаунт №3</a>
+      <a href="#">Profile 1</a>
+      <a href="#">Profile 2</a>
+      <a href="#">Profile 3</a>
     </div>
   </aside>
 
+  <!-- MAIN -->
   <main class="main">
     <div class="profile">
     </div>
   </main>
 
+  <!-- RIGHT SIDEBAR -->
+  <aside class="sidebar right">
+    <div>
+      <h2>Тир листы</h2>
+      <a href="#">Games</a>
+      <a href="#">Languages</a>
+      <a href="#">Tech</a>
+    </div>
+  </aside>
+
 </div>
 </body>
 </html>
+
 
 
 
