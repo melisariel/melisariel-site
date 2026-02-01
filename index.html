@@ -51,14 +51,13 @@ body {
   border-right: none;
   border-left: 1px solid #111;
 }
-  
+
 .sidebar h2 {
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--accent);
 }
-
 
 .sidebar a {
   display: block;
@@ -79,32 +78,24 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .profile {
-  margin-left: 12%;
-  max-width: 520px;
-  <h1 class="pixel-title">melisariel-site</h1>
+  text-align: center;
 }
-  .pixel-title {
+
+.pixel-title {
   font-family: 'Press Start 2P', monospace;
   font-size: 32px;
   color: var(--accent);
-  text-align: center;
   text-shadow:
     2px 2px 0 #000,
     4px 4px 0 #3b1fa8;
   animation: glitch 2.5s infinite;
 }
 
-.profile {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-  
-  @keyframes glitch {
+@keyframes glitch {
   0%   { transform: translate(0, 0); }
   20%  { transform: translate(-2px, 2px); }
   40%  { transform: translate(2px, -2px); }
@@ -112,23 +103,19 @@ body {
   80%  { transform: translate(1px, -1px); }
   100% { transform: translate(0, 0); }
 }
-
-
 </style>
 </head>
 
 <body>
 <div class="layout">
 
-  <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
-
     <div>
       <h2>Главное</h2>
-        <a href="https://github.com/melisariel/" target="_blank">• GitHub</a>
-        <a href="https://stepik.org/users/1111581831/" target="_blank">• Stepik</a>
+      <a href="https://github.com/melisariel/" target="_blank">• GitHub</a>
+      <a href="https://stepik.org/users/1111581831/" target="_blank">• Stepik</a>
     </div>
-        
+
     <div>
       <h2>Игры</h2>
       <a href="https://www.chess.com/member/melisariel" target="_blank">• Chess</a>
@@ -137,28 +124,18 @@ body {
 
     <div>
       <h2>Видео</h2>
-      <a href="https://www.tiktok.com/@melisariel?_r=1&_t=ZS-93XLnn5SpXu" target="_blank">• TikTok</a>
+      <a href="www.tiktok.com/@melisariel?_r=1&_t=ZS-93XLnn5SpXu" target="_blank">• TikTok</a>
       <a href="https://www.twitch.tv/melisariel" target="_blank">• Twitch</a>
       <a href="https://www.youtube.com/@melisarielcpp" target="_blank">• YouTube</a>
     </div>
-      
-    <div>
-      <h2>Ответы mail</h2>
-      <a href="https://otvet.mail.ru/profile/ariebenz/">• Аккаунт №1</a>
-      <a href="https://otvet.mail.ru/profile/rainbow666/">• Аккаунт №2</a>
-      <a href="https://otvet.mail.ru/profile/aless666/">• Аккаунт №3</a>
-      <a href="https://otvet.mail.ru/profile/honeybee_19/">• Аккаунт №4</a>
-      <a href="https://otvet.mail.ru/profile/leva_kurilov/">• Аккаунт №5</a>
-    </div>
   </aside>
 
-  <!-- MAIN -->
   <main class="main">
     <div class="profile">
+      <h1 class="pixel-title">melisariel-site</h1>
     </div>
   </main>
 
-  <!-- RIGHT SIDEBAR -->
   <aside class="sidebar right">
     <div>
       <h2>Тир листы</h2>
