@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="icon" href="./favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -82,7 +84,36 @@ body {
 .profile {
   margin-left: 12%;
   max-width: 520px;
+  <h1 class="pixel-title">melisariel-site</h1>
 }
+  .pixel-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 32px;
+  color: var(--accent);
+  text-align: center;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #3b1fa8;
+  animation: glitch 2.5s infinite;
+}
+
+.profile {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+  
+  @keyframes glitch {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-2px, 2px); }
+  40%  { transform: translate(2px, -2px); }
+  60%  { transform: translate(-1px, 1px); }
+  80%  { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+
 </style>
 </head>
 
@@ -138,6 +169,7 @@ body {
 </div>
 </body>
 </html>
+
 
 
 
