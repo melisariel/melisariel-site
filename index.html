@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
 <link rel="icon" href="./favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>melisariel</title>
@@ -54,8 +52,7 @@ body {
   color: var(--muted);
 }
 
-.nav a,
-.socials a {
+.sidebar a {
   display: block;
   text-decoration: none;
   color: var(--text);
@@ -65,8 +62,7 @@ body {
   transition: 0.2s;
 }
 
-.nav a:hover,
-.socials a:hover {
+.sidebar a:hover {
   color: var(--accent);
   opacity: 1;
 }
@@ -81,57 +77,36 @@ body {
   margin-left: 12%;
   max-width: 520px;
 }
-
-.profile h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.profile p {
-  margin-top: 18px;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--muted);
-}
-
-.divider {
-  margin-top: 28px;
-  width: 60px;
-  height: 2px;
-  background: var(--accent);
-  opacity: 0.6;
-}
 </style>
 </head>
 
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="nav">
-        <h2>Инфо</h2>
-        <a href="about.html">Обо мне</a>
-      </div>
+<div class="layout">
 
-      <div class="socials">
-        <h2>Профили</h2>
-        <a href="https://github.com/melisariel/" target="_blank">GitHub</a>
-        <a href="https://steamcommunity.com/id/melisariel/" target="_blank">Steam</a>
-        <a href="https://www.youtube.com/@melisarielcpp" target="_blank">YouTube</a>
-        <a href="https://www.tiktok.com/@melisariel?_r=1&_t=ZS-93XLnn5SpXu" target="_blank">TikTok</a>
-      </div>
-    </aside>
+  <aside class="sidebar">
 
-    <main class="main">
-      <div class="profile">
-      </div>
-    </main>
+    <div class="socials">
+      <h2>Аккаунты</h2>
+      <a href="https://github.com/melisariel/" target="_blank">GitHub</a>
+      <a href="https://steamcommunity.com/id/melisariel/" target="_blank">Steam</a>
+      <a href="https://www.youtube.com/@melisarielcpp" target="_blank">YouTube</a>
+    </div>
 
-  </div>
+    <div class="answers">
+      <h2>Ответы mail</h2>
+      <a href="https://otvet.mail.ru/profile/ariebenz/" target="_blank">Аккаунт №1</a>
+      <a href="https://otvet.mail.ru/profile/rainbow666/" target="_blank">Аккаунт №2</a>
+      <a href="https://otvet.mail.ru/profile/aless666/" target="_blank">Аккаунт №3</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="profile">
+    </div>
+  </main>
+
+</div>
 </body>
 </html>
-
-
-
 
 
