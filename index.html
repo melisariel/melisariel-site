@@ -100,37 +100,63 @@ body {
   position: relative;
 }
 
-.profile::before,
-.profile::after {
-  content: "████";
+.pixel-title::before,
+.pixel-title::after {
+  content: "";
   position: absolute;
   top: 50%;
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent),
+    transparent
+  );
   transform: translateY(-50%);
-  font-family: 'Press Start 2P', monospace;
-  font-size: 14px;
-  color: var(--accent);
-  opacity: 0.6;
-  animation: glitchSide 1.8s infinite steps(2);
-  pointer-events: none;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 8px rgba(139,92,246,0.5));
+  animation: linePulse 4s infinite;
+}
+
+.pixel-title::before {
+  right: 100%;
+  margin-right: 48px;
+}
+
+.pixel-title::after {
+  left: 100%;
+  margin-left: 48px;
+}
+
+.profile::before,
+.profile::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent);
+  opacity: 0.8;
 }
 
 .profile::before {
-  right: 100%;
-  margin-right: 16px;
+  left: -24px;
+  border-right: none;
+  border-bottom: none;
+  transform: translateY(-50%);
 }
 
 .profile::after {
-  left: 100%;
-  margin-left: 16px;
+  right: -24px;
+  border-left: none;
+  border-top: none;
+  transform: translateY(-50%);
 }
 
-@keyframes glitchSide {
-  0%   { transform: translateY(-50%) translateX(0);    opacity: 0.4; }
-  20%  { transform: translateY(-48%) translateX(-2px); opacity: 0.7; }
-  40%  { transform: translateY(-52%) translateX(2px);  opacity: 0.5; }
-  60%  { transform: translateY(-50%) translateX(-1px); opacity: 0.8; }
-  80%  { transform: translateY(-49%) translateX(1px);  opacity: 0.6; }
-  100% { transform: translateY(-50%) translateX(0);    opacity: 0.4; }
+@keyframes linePulse {
+  0%,100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
 }
   
 </style>
@@ -191,6 +217,7 @@ body {
 </div>
 </body>
 </html>
+
 
 
 
