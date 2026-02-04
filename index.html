@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>melisariel</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="icon" href="./favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>melisariel</title>
 
 <style>
 :root {
@@ -77,12 +76,15 @@ body {
 .main {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding-top: 72px;
+  gap: 48px;
 }
 
 .profile {
+  position: relative;
   text-align: center;
 }
 
@@ -96,10 +98,6 @@ body {
   animation: glitch 2.5s infinite;
 }
 
- .profile {
-  position: relative;
-}
-
 .pixel-title::before,
 .pixel-title::after {
   content: "";
@@ -107,12 +105,7 @@ body {
   top: 50%;
   width: 180px;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--accent),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
   transform: translateY(-50%);
   opacity: 0.7;
   filter: drop-shadow(0 0 8px rgba(139,92,246,0.5));
@@ -159,8 +152,7 @@ body {
   50% { opacity: 0.9; }
 }
 
-  .bio {
-  margin-top: 48px;
+.bio {
   display: flex;
   align-items: center;
   gap: 32px;
@@ -183,10 +175,8 @@ body {
 }
 
 .bio-text p {
-  margin-bottom: 6px;
+  margin: 0;
 }
-
-  
 </style>
 </head>
 
@@ -216,30 +206,30 @@ body {
     </div>
 
     <div>
-  <h2>Ответы mail</h2>
-  <a href="https://otvet.mail.ru/profile/ariebenz/" target="_blank">• Аккаунт №1</a>
-  <a href="https://otvet.mail.ru/profile/rainbow666/" target="_blank">• Аккаунт №2</a>
-  <a href="https://otvet.mail.ru/profile/aless666/" target="_blank">• Аккаунт №3</a>
-  <a href="https://otvet.mail.ru/profile/honeybee_19/" target="_blank">• Аккаунт №4</a>
-  <a href="https://otvet.mail.ru/profile/leva_kurilov/" target="_blank">• Аккаунт №5</a>
-  <a href="https://otvet.live/profile/id800039167/" target="_blank">• Аккаунт №6</a>
-   </div>
+      <h2>Ответы mail</h2>
+      <a href="https://otvet.mail.ru/profile/ariebenz/" target="_blank">• Аккаунт №1</a>
+      <a href="https://otvet.mail.ru/profile/rainbow666/" target="_blank">• Аккаунт №2</a>
+      <a href="https://otvet.mail.ru/profile/aless666/" target="_blank">• Аккаунт №3</a>
+      <a href="https://otvet.mail.ru/profile/honeybee_19/" target="_blank">• Аккаунт №4</a>
+      <a href="https://otvet.mail.ru/profile/leva_kurilov/" target="_blank">• Аккаунт №5</a>
+      <a href="https://otvet.live/profile/id800039167/" target="_blank">• Аккаунт №6</a>
+    </div>
 
   </aside>
 
   <main class="main">
     <div class="profile">
       <h1 class="pixel-title">melisariel-site</h1>
+
+      <div class="bio">
+        <img src="avatar.webp" alt="me">
+        <div class="bio-text">
+          <p>Математика</p>
+        </div>
+      </div>
+
     </div>
   </main>
-
-  <div class="bio">
-  <img src="avatar.jpg" alt="me">
-  <div class="bio-text">
-    <p>Математика</p>
-  </div>
-</div>
-
 
   <aside class="sidebar right">
     <div>
@@ -253,8 +243,6 @@ body {
 </div>
 </body>
 </html>
-
-
 
 
 
