@@ -158,6 +158,34 @@ body {
   0%,100% { opacity: 0.4; }
   50% { opacity: 0.9; }
 }
+
+  .bio {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 720px;
+}
+
+.bio img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(100%) contrast(1.1);
+  border: 1px solid #1a1a1a;
+}
+
+.bio-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.bio-text p {
+  margin-bottom: 6px;
+}
+
   
 </style>
 </head>
@@ -205,6 +233,14 @@ body {
     </div>
   </main>
 
+  <div class="bio">
+  <img src="avatar.jpg" alt="me">
+  <div class="bio-text">
+    <p>Математика</p>
+  </div>
+</div>
+
+
   <aside class="sidebar right">
     <div>
       <h2>Тир листы</h2>
@@ -217,6 +253,7 @@ body {
 </div>
 </body>
 </html>
+
 
 
 
