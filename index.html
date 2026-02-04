@@ -77,15 +77,14 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 72px;
-  gap: 48px;
+  padding: 72px 0;
 }
 
 .profile {
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
 .pixel-title {
@@ -156,12 +155,14 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
-  max-width: 720px;
+  width: 80%;
+  max-width: 900px;
+  padding-bottom: 48px;
 }
 
 .bio img {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   border-radius: 6px;
   filter: grayscale(100%) contrast(1.1);
@@ -169,7 +170,7 @@ body {
 }
 
 .bio-text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -220,14 +221,13 @@ body {
   <main class="main">
     <div class="profile">
       <h1 class="pixel-title">melisariel-site</h1>
+    </div>
 
-      <div class="bio">
-        <img src="avatar.webp" alt="me">
-        <div class="bio-text">
-          <p>Математика</p>
-        </div>
+    <div class="bio">
+      <img src="avatar.webp" alt="me">
+      <div class="bio-text">
+        <p>Математика</p>
       </div>
-
     </div>
   </main>
 
@@ -243,6 +243,7 @@ body {
 </div>
 </body>
 </html>
+
 
 
 
