@@ -94,6 +94,44 @@ body {
     2px 2px 0 #000,
     4px 4px 0 #3b1fa8;
   animation: glitch 2.5s infinite;
+
+  .profile {
+  position: relative;
+}
+
+.profile::before,
+.profile::after {
+  content: "████";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0.6;
+  animation: glitchSide 1.8s infinite steps(2);
+  pointer-events: none;
+}
+
+.profile::before {
+  right: 100%;
+  margin-right: 16px;
+}
+
+.profile::after {
+  left: 100%;
+  margin-left: 16px;
+}
+
+@keyframes glitchSide {
+  0%   { transform: translateY(-50%) translateX(0);   opacity: 0.4; }
+  20%  { transform: translateY(-48%) translateX(-2px); opacity: 0.7; }
+  40%  { transform: translateY(-52%) translateX(2px);  opacity: 0.5; }
+  60%  { transform: translateY(-50%) translateX(-1px); opacity: 0.8; }
+  80%  { transform: translateY(-49%) translateX(1px);  opacity: 0.6; }
+  100% { transform: translateY(-50%) translateX(0);   opacity: 0.4; }
+}
+
 }
 
 @keyframes glitch {
@@ -153,15 +191,16 @@ body {
   <aside class="sidebar right">
     <div>
       <h2>Тир листы</h2>
-      <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF Characters</a>
-      <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• Valorant Agents</a>
       <a href="https://tiermaker.com/list/valorant/valorant-maps-v25-with-corrode-18424972/5906090">• Valorant Maps</a>
+      <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• Valorant Agents</a>
+      <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF Characters</a>
     </div>
   </aside>
 
 </div>
 </body>
 </html>
+
 
 
 
