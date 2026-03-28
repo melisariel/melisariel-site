@@ -37,21 +37,6 @@ body {
   height: 100%;
 }
 
-.sidebar {
-  width: 220px;
-  padding: 40px 24px;
-  border-right: 1px solid #111;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.sidebar.right .links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .tier-title {
   font-family: Inter, system-ui, Arial, sans-serif;
   font-size: 0.9rem;
@@ -198,14 +183,6 @@ body {
   display: block;
 }
 
-.sidebar.right .tier-title{
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  color: var(--accent);
-  text-align: center;
-  margin-bottom: 18px;
-}
 
 .sidebar.right .links a{
   font-family: 'Press Start 2P', monospace;
@@ -221,6 +198,15 @@ body {
 .sidebar.right .links a:hover{
   color: var(--accent);
   opacity: 1;
+}
+
+  .sidebar.right .tier-title{
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 18px;
 }
   
 </style>
