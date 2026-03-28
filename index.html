@@ -46,22 +46,25 @@ body {
   gap: 24px;
 }
 
-.sidebar.right a {
-  display: block;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.63rem;
-  font-family: 'Press Start 2P', monospace;
-  padding: 4px 0;
-  opacity: 0.85;
-  transition: 0.2s;
+.sidebar.right .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* центрирует всё по горизонтали */
 }
 
-.sidebar.right a:hover {
+.tier-title {
+  font-family: Inter, system-ui, Arial, sans-serif; /* другой шрифт */
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--accent);
-  opacity: 1;
+  margin-bottom: 14px;     /* выше списка */
 }
 
+.sidebar.right a {
+  text-align: center;
+}
+  
 .sidebar h2 {
   font-size: 0.85rem;
   letter-spacing: 1px;
@@ -218,13 +221,13 @@ body {
 
 <aside class="sidebar right">
   <div class="links">
-    <h2>Тирлисты</h2>
-      <a href="https://tiermaker.com/list/anime-and-manga/anime-tier-list-300-anime-17194/6078964">• ANIME</a>
-    
-      <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF</a>
-      <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• VALORANT[A]</a>
-      <a href="https://tiermaker.com/list/valorant/valorant-maps-v25-with-corrode-18424972/5906090">• VALORANT[M]</a>
-  </div>
+  <div class="tier-title">Тир листы</div>
+
+  <a href="https://tiermaker.com/list/anime-and-manga/anime-tier-list-300-anime-17194/6078964">• ANIME</a>
+  <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF</a>
+  <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• VALORANT[A]</a>
+  <a href="https://tiermaker.com/list/valorant/valorant-maps-v25-with-corrode-18424972/5906090">• VALORANT[M]</a>
+</div>
 </aside>
 
 </div>
