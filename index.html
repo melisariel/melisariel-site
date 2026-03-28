@@ -46,9 +46,20 @@ body {
   gap: 24px;
 }
 
-.sidebar.right {
-  border-right: none;
-  border-left: 1px solid #111;
+.sidebar.right a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.85rem; /* меньше шрифт */
+  font-family: 'Press Start 2P', monospace; /* другой стиль */
+  padding: 4px 0;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.sidebar.right a:hover {
+  color: var(--accent);
+  opacity: 1;
 }
 
 .sidebar h2 {
