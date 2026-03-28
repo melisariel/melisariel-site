@@ -33,32 +33,28 @@ body{
 
 /* ===== ПРАВЫЙ БЛОК ===== */
 
+.sidebar.right{
+  border-left: 1px solid #111;
+  border-right: none;
+}
+
+.sidebar.right .links{
+  display: flex;
+  flex-direction: column;
+}
+
 .sidebar.right .tier-title{
-  font-family:'Press Start 2P',monospace;
-  font-size:.7rem;
-  letter-spacing:2px;
-  color:var(--accent);
-  text-align:center;
-  margin-bottom:22px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;      /* увеличен */
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-.sidebar.right a{
-  display:block;
-  font-family:'Press Start 2P',monospace;
-  font-size:.63rem;
-  text-decoration:none;
-  color:var(--text);
-  padding:6px 0;
-  opacity:.85;
-  transition:.2s;
-  text-align:left;
+.sidebar.right .links a{
+  text-align: left;
 }
-
-.sidebar.right a:hover{
-  color:var(--accent);
-  opacity:1;
-}
-
 /* ===== MAIN ===== */
 
 .main{
@@ -113,14 +109,16 @@ body{
     </div>
   </main>
 
-  <aside class="sidebar right">
+ <aside class="sidebar right">
+  <div class="links">
     <div class="tier-title">Тирлисты</div>
 
-    <a href="#">• ANIME</a>
-    <a href="#">• FNAF</a>
-    <a href="#">• VALORANT[A]</a>
-    <a href="#">• VALORANT[M]</a>
-  </aside>
+    <a href="https://tiermaker.com/list/anime-and-manga/anime-tier-list-300-anime-17194/6078964">• ANIME</a>
+    <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF</a>
+    <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• VALORANT[A]</a>
+    <a href="https://tiermaker.com/list/valorant/valorant-maps-v25-with-corrode-18424972/5906090">• VALORANT[M]</a>
+  </div>
+</aside>
 
 </div>
 </body>
