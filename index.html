@@ -32,35 +32,24 @@
       font-family: Inter, system-ui, Arial, sans-serif;
     }
 
-   .layout {
-      display: flex;
-      height: 100%;
-    }
+
     
+   .layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  height: 100vh;
+}
     .sidebar {
-  width: 220px;
   padding: 40px 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-    }
-    
-  .sidebar:first-of-type {
   border-right: 1px solid #111;
-    }
-
-  .sidebar.right {
+}
+    .sidebar:last-of-type {
+  border-right: none;
   border-left: 1px solid #111;
-    }
-    
-  .sidebar.right a:hover {
-      color: var(--accent);
-      opacity: 1;
-    }
-
-    .sidebar:first-of-type {
-  border-right: 1px solid #111;
-    }
+}
     
     .sidebar h2 {
       font-size: 0.85rem;
