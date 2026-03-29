@@ -71,9 +71,6 @@
       color: var(--accent);
       opacity: 1;
 }
-    .sidebar.right {
-  font-family: 'Press Start 2P', monospace;
-}
     .sidebar.right h2 {
   text-align: center;
   font-size: 16px;
@@ -82,6 +79,19 @@
     .sidebar.right a {
   font-size: 11px;
   text-align: left;
+  display: block;
+  padding: 8px 0;
+}
+    .sidebar.pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+    .sidebar.pixel h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+    .sidebar.pixel a {
+  font-size: 11px;
   display: block;
   padding: 8px 0;
 }
@@ -194,7 +204,23 @@
   <div class="layout">
 
 <!-- ====== ЛЕВАЯ КОЛОНКА ====== -->
-    <aside class="sidebar"></aside>
+   <aside class="sidebar pixel">
+  <div class="links">
+    <h2>Profiles</h2>
+
+    <a href="https://stepik.org/users/1111581831/" target="_blank">• Stepik</a>
+    <a href="https://www.chess.com/member/melisariel" target="_blank">• Chess</a>
+    <a href="https://www.faceit.com/en/players/melisariel/cs2" target="_blank">• FACEIT</a>
+    <a href="https://kick.com/melisariel" target="_blank">• Kick</a>
+
+    <a href="https://otvet.mail.ru/profile/ariebenz/" target="_blank">• Аккаунт №1</a>
+    <a href="https://otvet.mail.ru/profile/rainbow666/" target="_blank">• Аккаунт №2</a>
+    <a href="https://otvet.mail.ru/profile/aless666/" target="_blank">• Аккаунт №3</a>
+    <a href="https://otvet.mail.ru/profile/honeybee_19/" target="_blank">• Аккаунт №4</a>
+    <a href="https://otvet.mail.ru/profile/leva_kurilov/" target="_blank">• Аккаунт №5</a>
+    <a href="https://otvet.live/profile/id800039167/" target="_blank">• Аккаунт №6</a>
+  </div>
+</aside>
 
 <!-- ====== ЦЕНТРАЛЬНАЯ КОЛОНКА ====== -->
     <main class="main">
@@ -213,7 +239,7 @@
     </main>
 
 <!-- ====== ПРАВАЯ КОЛОНКА ====== -->
-    <aside class="sidebar right">
+    <aside class="sidebar right pixel">
       <div class="links">
         <h2>Tierlists</h2>
         <a href="https://tiermaker.com/list/anime-and-manga/anime-tier-list-300-anime-17194/6078964">• ANIME</a>
