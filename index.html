@@ -44,20 +44,16 @@
   flex-direction: column;
   gap: 24px;
     }
-
-    .sidebar.right a {
-      display: block;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.63rem;
-      font-family: 'Press Start 2P', monospace;
-      padding: 4px 0;
-      opacity: 0.85;
-      transition: 0.2s;
-      border-left: 1px solid #111;
+    
+  .sidebar:first-of-type {
+  border-right: 1px solid #111;
     }
 
-    .sidebar.right a:hover {
+  .sidebar.right {
+  border-left: 1px solid #111;
+    }
+    
+  .sidebar.right a:hover {
       color: var(--accent);
       opacity: 1;
     }
