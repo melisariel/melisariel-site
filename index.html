@@ -39,6 +39,8 @@
   grid-template-columns: 220px 1fr 220px;
   height: 100vh;
 }
+
+/* ================== БОКОВЫЕ КОЛОНКИ ================== */
     .sidebar {
   padding: 40px 24px;
   display: flex;
@@ -49,15 +51,13 @@
     .sidebar:last-of-type {
   border-right: none;
   border-left: 1px solid #111;
-}
-    
+}   
     .sidebar h2 {
       font-size: 0.85rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--accent);
-    }
-
+}
     .sidebar a {
       display: block;
       text-decoration: none;
@@ -66,13 +66,13 @@
       padding: 6px 0;
       opacity: 0.85;
       transition: 0.2s;
-    }
-
+}
     .sidebar a:hover {
       color: var(--accent);
       opacity: 1;
-    }
+}
 
+/* ================== ЦЕНТРАЛЬНАЯ КОЛОНКА ================== */
     .main {
       flex: 1;
       display: flex;
@@ -81,21 +81,18 @@
       align-items: center;
       padding-top: 40px;
       padding-bottom: 0;
-    }
-
+}
     .profile {
       text-align: center;
       position: relative;
-    }
-
+}
     .pixel-title {
       font-family: 'Press Start 2P', monospace;
       font-size: 32px;
       color: var(--accent);
       text-shadow: 2px 2px 0 #000, 4px 4px 0 #3b1fa8;
       animation: glitch 2.5s infinite;
-    }
-
+}
     .pixel-title::before,
     .pixel-title::after {
       content: "";
@@ -108,18 +105,15 @@
       opacity: 0.7;
       filter: drop-shadow(0 0 8px rgba(139,92,246,0.5));
       animation: linePulse 4s infinite;
-    }
-
+}
     .pixel-title::before {
       right: 100%;
       margin-right: 48px;
-    }
-
+}
     .pixel-title::after {
       left: 100%;
       margin-left: 48px;
-    }
-
+}
     .profile::before,
     .profile::after {
       content: "";
@@ -129,26 +123,24 @@
       height: 12px;
       border: 2px solid var(--accent);
       opacity: 0.8;
-    }
-
+}
     .profile::before {
       left: -24px;
       border-right: none;
       border-bottom: none;
       transform: translateY(-50%);
-    }
-
+}
     .profile::after {
       right: -24px;
       border-left: none;
       border-top: none;
       transform: translateY(-50%);
-    }
-
+}
     @keyframes linePulse {
       0%, 100% { opacity: 0.4; }
       50% { opacity: 0.9; }
-    }
+}
+
 
     .bio {
       display: flex;
@@ -157,7 +149,7 @@
       margin-top: 24px;
       align-self: flex-start;
       padding-left: 24px;
-    }
+}
 
     .bio img {
       width: 225px;
@@ -165,29 +157,32 @@
       object-fit: cover;
       border-radius: 6px;
       border: 1px solid #1a1a1a;
-    }
-
+}
     .bio-text {
       font-size: 1rem;
       line-height: 1.6;
       color: #e6e6e6;
-    }
-
+}
     .bio-text p {
       margin: 0;
-    }
+}
 
     .bio-accent {
       color: var(--accent);
       font-weight: 700;
-    }
+}
+
+    
   </style>
 </head>
 
 <body>
   <div class="layout">
+
+<!-- ====== ЛЕВАЯ КОЛОНКА ====== -->
     <aside class="sidebar"></aside>
 
+<!-- ====== ЦЕНТРАЛЬНАЯ КОЛОНКА ====== -->
     <main class="main">
       <div class="profile">
         <h1 class="pixel-title">melisariel-site</h1>
@@ -203,10 +198,10 @@
       </div>
     </main>
 
+<!-- ====== ПРАВАЯ КОЛОНКА ====== -->
     <aside class="sidebar right">
       <div class="links">
-        <h2>Тирлисты</h2>
-
+        <h2>Tierlists</h2>
         <a href="https://tiermaker.com/list/anime-and-manga/anime-tier-list-300-anime-17194/6078964">• ANIME</a>
         <a href="https://tiermaker.com/list/fnaf/all-fnaf-characters-tier-list-547930/5908267">• FNAF</a>
         <a href="https://tiermaker.com/list/valorant/valorant-agents-18566020/5905278/">• VALORANT[A]</a>
